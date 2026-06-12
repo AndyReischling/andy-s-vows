@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Andy's Vows — texture & treatment CSS
+   Plain CSS vars + utility classes applied alongside Tailwind.
+   ============================================================ */
+
+:root {
+  --oxblood: #7a1414;
+  --slate: #3b3550;
+  --bone: #ece3d0;
+  --periwinkle: #8ea3e0;
+  --ink: #1c1a22;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bone);
+  color: var(--ink);
+}
+
+/* ---- 1. RISO GRAIN OVERLAY ------------------------------------------------- */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.1; /* 0.07–0.14 is the tasteful range */
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ---- 2. PAPER TOOTH on colored panels -------------------------------------- */
+.panel-paper {
+  position: relative;
+}
+.panel-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.16' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+}
+
+/* ---- 3. OFF-REGISTER PRINT on headlines ------------------------------------ */
+.misreg-blue {
+  text-shadow:
+    1.2px 0.6px 0 rgba(142, 163, 224, 0.55),
+    -0.6px -0.4px 0 rgba(236, 227, 208, 0.25);
+}
+.misreg-red {
+  text-shadow:
+    1.2px 0.6px 0 rgba(122, 20, 20, 0.45),
+    -0.6px -0.4px 0 rgba(142, 163, 224, 0.3);
+}
+
+/* ---- 4. ORNAMENT COLOR HELPERS --------------------------------------------- */
+.ornament-periwinkle {
+  color: var(--periwinkle);
+}
+.ornament-oxblood {
+  color: var(--oxblood);
+}
+.ornament-bone {
+  color: var(--bone);
+}
+.ornament-slate {
+  color: var(--slate);
+}
+
+/* ---- 5. GHOSTED WATERMARK WORDMARK ----------------------------------------- */
+.watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 0.2em 0.6em;
+  opacity: 0.05;
+  font-family: var(--font-script), "Pinyon Script", cursive;
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 0.9;
+  transform: rotate(-8deg) scale(1.3);
+  user-select: none;
+}
+
+/* ---- 6. PANEL BACKGROUND UTILITIES ----------------------------------------- */
+.bg-oxblood {
+  background-color: var(--oxblood);
+  color: var(--bone);
+}
+.bg-slate {
+  background-color: var(--slate);
+  color: var(--bone);
+}
+.bg-bone {
+  background-color: var(--bone);
+  color: var(--ink);
+}
+
+/* ---- Focus visibility for accessibility ------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--periwinkle);
+  outline-offset: 3px;
+}
