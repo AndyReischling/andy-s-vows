@@ -49,8 +49,8 @@ export default function Hero() {
           <p>
             The Catholic Church used to tell you what to say when you got
             married, and that was a pretty good system because no one sounded
-            smarter than the other person. Now, you go to weddings and you hear
-            people who&apos;ve written their own vows and you can tell that one
+            smarter than the other person. Now, you go to weddings, and you hear
+            people who&apos;ve written their own vows, and you can tell that one
             person is a much better writer and deeper thinker than the other
             person. And, frankly, it&apos;s embarrassing when they get dunked on
             by their partner (usually the bride).
