@@ -25,10 +25,25 @@ const pinyon = Pinyon_Script({
   display: "swap",
 });
 
+const PREVIEW = "From the wedding to the bedding";
+
 export const metadata: Metadata = {
-  title: "Andy's Vows — I Turn Vowels Into Howls",
-  description:
-    "A wedding vow writing service. I interview you about your relationship, then I write your vows for you. You will win the vows contest.",
+  metadataBase: new URL("https://www.andysvows.com"),
+  title: PREVIEW,
+  description: PREVIEW,
+  applicationName: PREVIEW,
+  openGraph: {
+    title: PREVIEW,
+    description: PREVIEW,
+    siteName: PREVIEW,
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PREVIEW,
+    description: PREVIEW,
+  },
 };
 
 export default function RootLayout({
