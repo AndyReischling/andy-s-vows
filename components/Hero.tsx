@@ -51,15 +51,14 @@ export default function Hero() {
             married, and that was a pretty good system because no one sounded
             smarter than the other person. Now, you go to weddings and you hear
             people who&apos;ve written their own vows and you can tell that one
-            person is a much better writer and deeper thinking than the other
+            person is a much better writer and deeper thinker than the other
             person. And, frankly, it&apos;s embarrassing when they get dunked on
             by their partner (usually the bride).
           </p>
           <p>
-            Andy&apos;s Vows guarantees that you will be the one winning the vows
-            contest. You will come across as the thoughtful, soulful, loving and
-            eloquent partner that you probably are in your heart, but just
-            can&apos;t find its way out.
+            Andy&apos;s Vows guarantees that you will come across as the
+            thoughtful, soulful, loving and eloquent partner that you probably
+            are in your heart, but that just can&apos;t find its way out.
           </p>
         </div>
 
